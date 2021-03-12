@@ -7,12 +7,12 @@ export class CarsController {
     constructor(private readonly carService: CarsService) { }
 
     @Get()
-    findAll(@Req() request: Request) : {} {
+    findAll(@Req() request: Request): {} {
         return this.carService.findAll();
     }
 
     @Get(':id')
-    findOne(@Param() param):{}{
+    findOne(@Param() param): {} {
         return this.carService.findOne(param.id);
     }
 }
